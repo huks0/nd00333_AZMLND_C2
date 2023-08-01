@@ -6,7 +6,7 @@ In the second part we create, publish and consume a pipeline that also includes 
 
 ## Architectural Diagram
 
-![archtitecture](./sample_screenshots/Bildschirmfoto 2023-08-01 um 12.46.14.png)
+![archtitecture](./sample_screenshots/Bildschirmfoto%202023-08-01%20um%2012.46.14.png)
 
 Part 1:
 
@@ -30,32 +30,30 @@ Part2:
 
 In the first step we uploaded and registered the Bank Marketing dataset:
 
-![archtitecture](./screenshots/dataset_submission.PNG)
+![archtitecture](./sample_screenshots/Bildschirmfoto%202023-07-25%20um%2009.26.48.png)
 
 ## 2 Create AutoML Experiment 
 
 In the next step, we created an Azure AutoML model using the registered bank marketing dataset. Thereby, we created a compute cluster
 to run various models using different algorithms within the AutoML experiment.
 
-![archtitecture](./screenshots/finished_model_submission.PNG)
+![archtitecture](./sample_screenshots/Bildschirmfoto%202023-07-25%20um%2009.40.24.png)
 
 ## 3 Best performing run
 
 The best resulting run was a VotingEnsemble, which reached a weighted AUC of 94.77%. We subsequently deployed this model.
-
-![archtitecture](./screenshots/best_model_submission.PNG)
+![archtitecture](./sample_screenshots/Bildschirmfoto%202023-07-25%20um%2009.38.23.png)
+![archtitecture](./)
 
 ## 4 Enable application insights
 
 In order to enable logging, we downloaded the configuration file from Azure workspace, added it to the current working directory 
 and set service.update(enable_app_insights=True) in the logs.py file to enable application insights. After that we ran the 
 logs.py in the shell:
-
-![archtitecture](./screenshots/logs1_submission.PNG)
+![archtitecture](./sample_screenshots/Bildschirmfoto%202023-08-01%20um%2009.16.40.png)
 
 After that, we were able to monitor the Application Insigts in the Azure ML Studio:
-
-![archtitecture](./screenshots/application_insights_submission.PNG)
+![archtitecture](./sample_screenshots/Bildschirmfoto%202023-08-01%20um%2012.23.55.png)
 
 
 ## 5 Configure Swagger Docs
@@ -63,18 +61,17 @@ After that, we were able to monitor the Application Insigts in the Azure ML Stud
 In the next step, we configured the swagger docs. Thereby we installed swagger by adapting the port number in the bash 
 script. After that we ran the script and entered the localhost:
 
-![archtitecture](./screenshots/swagger_submission1.PNG)
+![archtitecture](./sample_screenshots/Bildschirmfoto%202023-08-01%20um%2012.33.52.png)
 
 Then we started the server by running serve.py file in order to get insights into our project's swagger.json file.
 
-![archtitecture](./screenshots/swagger_submission2.PNG)
+![archtitecture](./sample_screenshots/Bildschirmfoto%202023-08-01%20um%2012.34.03.png)
 
 ## 6 Consuming the deployed Endpoint
 
 After deploying the best model, we can consume it by calling the endpoint. To do so, we need to adapt the endpoint uri 
-and the key from the deployed model consume section in the endpoints.py and run the latter file:
-
-![archtitecture](./screenshots/endpoint_submission.PNG)
+and the key from the deployed model consume section in the endpoints.py and run the latter file. In my case I copied the content of endpoint.py in a notebook and adapted it slightly using the consume endpoint code of Azure to execute it.
+![archtitecture](./sample_screenshots/Bildschirmfoto%202023-08-01%20um%2012.05.11.png)
 
 
 ## Part 2:
@@ -84,18 +81,16 @@ and the key from the deployed model consume section in the endpoints.py and run 
 To create and deploy the pipleine, we uploaded the sample notebook, made required changes and subsequently ran 
 the notebook. After the deployement we were able to consume the pipeline endpoint.
 
-![archtitecture](./screenshots/pipeline_created_submission.PNG)
+![archtitecture](./sample_screenshots/Bildschirmfoto%202023-08-01%20um%2012.08.58.png)
 
-![archtitecture](./screenshots/pipeline_overview_submission.PNG)
+![archtitecture](./sample_screenshots/Bildschirmfoto%202023-08-01%20um%2012.13.59.png)
 
-![archtitecture](./screenshots/RunDetailsWidget_submission.PNG)
+![archtitecture](./sample_screenshots/Bildschirmfoto%202023-08-01%20um%2012.15.26.png)
 
-![archtitecture](./screenshots/published_pipeline_overview_submission.PNG)
+![archtitecture](./sample_screenshots/Bildschirmfoto%202023-08-01%20um%2012.10.05.png)
 
+![archtitecture](./sample_screenshots/Bildschirmfoto%202023-08-01%20um%2012.10.30.png)
 
-## Screen Recording
-
-You can find a live demo of my project on my [YouTube](https://www.youtube.com/watch?v=37JjRFef9_s).
 
 ## Future Work
 
